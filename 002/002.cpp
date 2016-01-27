@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-int seq[40] = {};
-int limit;
+int seq[40] = {1, 2};
+int limit, tmp;
 int sum = 0;
 
 int main(void)
 {
-  for (int i = 0; i <= 40; i++)
+  for (int i = 2; i <= 40; i++)
   {
-    if (i < 2) {
-      seq[i] = i + 1;
-    } else if (4000000 <= seq[i-2] + seq[i-1]) {
+    tmp = seq[i-2] + seq[i-1];
+    if (4000000 <= tmp) {
       limit = i;
       break;
     } else {
-      seq[i] = seq[i-2] + seq[i-1];
+      seq[i] = tmp;
     }
   }
 
