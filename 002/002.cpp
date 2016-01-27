@@ -2,7 +2,7 @@
 
 int seq[40] = {1, 2};
 int limit, tmp;
-int sum = 0;
+int sum = 2;
 
 int main(void)
 {
@@ -14,13 +14,7 @@ int main(void)
       break;
     } else {
       seq[i] = tmp;
-    }
-  }
-
-  for (int j = 0; j < limit; j++ )
-  {
-    if (seq[j] % 2 == 0) {
-      sum += seq[j];
+      if (tmp % 2 == 0) sum += tmp;
     }
   }
 
