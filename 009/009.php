@@ -1,21 +1,14 @@
 <?php
 // $input = (int)trim(fgets(STDIN));
 $input = 1000;
-$sqrt = sqrt($input);
-$a = $b = $c = 0;
 
-for ($i = 1; $i <= $sqrt - 2; $i++) {
-  $a = $i * $i;
-  for ($j = 2; $j <= $sqrt - 1; $j++) {
-    $b = $j * $j;
-    for ($k = 3; $k <= $sqrt; $k++) {
-      $c = $k * $k;
-      if ($a + $b + $c === $input) {
-        break 3;
-      }
+for ($i=1; $i<=$input-2; $i++) {
+  for ($j=$i+1; $j<=$input-$i-1; $j++) {
+    $k = $input-($i+$j);
+    if (($i*$i)+($j*$j) === $k*$k) {
+      $result = $i*$j*$k;
+      echo "$result\n";
+      break 2;
     }
   }
 }
-
-$result = $a * $b * $c;
-echo "$result\n";
