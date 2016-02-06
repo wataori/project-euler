@@ -22,10 +22,18 @@ let input = [
             ]
 var ans = 0
 
-for var y = 3; y < 17; y++ {
-  for var x = 3; x < 17; x++ {
-    var left = input[y][x] * input[y-1][x-1] * input[y-2][x-2] * input[y-3][x-3]
-    var right = input[y][x] * input[y+1][x+1] * input[y+2][x+2] * input[y+3][x+3]
+func getNumByIdx(y y:Int, x:Int) -> (Int) {
+  if x < 0 || x >= 20 || y < 0 || y >= 20 {
+    return 0
+  } else {
+    return input[y][x]
+  }
+}
+
+for var y = 0; y < 20; y++ {
+  for var x = 0; x < 20; x++ {
+    var left = getNumByIdx(y:y, x:x) * getNumByIdx(y:y-1, x:x-1) * getNumByIdx(y:y-2, x:x-2) * getNumByIdx(y:y-3, x:x-3)
+    var right = getNumByIdx(y:y, x:x) * getNumByIdx(y:y+1, x:x+1) * getNumByIdx(y:y+2, x:x+2) * getNumByIdx(y:y+3, x:x+3)
     ans = max(ans, left, right)
   }
 }
