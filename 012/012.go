@@ -11,7 +11,7 @@ func main()  {
 func solver(n int) int {
   triangul := n*(n+1)/2
   count := count_divisors(2, triangul, 2)
-  if count >= 500 {
+  if count > 500 {
     return triangul
   } else {
     return solver(n+1)
