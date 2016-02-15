@@ -57,3 +57,9 @@ Project Euler
 
 ## Problem 17
 - Java
+
+## Problem 18
+- JavaScript
+
+## Problem 19
+- Go
