@@ -70,3 +70,6 @@
 
 ## Problem 21
 - Python
+
+## Problem 22
+- PHP
