@@ -80,3 +80,4 @@
 
 ## Problem 24
 - Go
+- Python
