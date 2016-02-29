@@ -76,3 +76,8 @@
 
 ## Problem 23
 - Python
+- Elixir
+
+## Problem 24
+- Go
+- Python
