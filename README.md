@@ -81,3 +81,6 @@
 ## Problem 24
 - Go
 - Python
+
+## Problem 25
+- Perl
